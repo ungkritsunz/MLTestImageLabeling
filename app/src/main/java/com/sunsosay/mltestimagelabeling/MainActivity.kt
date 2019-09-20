@@ -11,7 +11,7 @@ import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.label.FirebaseVisionCloudImageLabelerOptions
 import com.google.firebase.ml.vision.text.FirebaseVisionCloudTextRecognizerOptions
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
+import java.util.regex.Pattern
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             dispatchTakePictureIntent()
         }
+        textView.setOnClickListener {
+            callApi()
+        }
     }
 
     private fun analyzeText(bitmap:Bitmap){
@@ -55,6 +58,15 @@ class MainActivity : AppCompatActivity() {
                     val blockCornerPoints = block.cornerPoints
                     val blockFrame = block.boundingBox
                     for (line in block.lines) {
+                        if(line.text.length == 17){
+                            val p = Pattern.compile("\\d{2}-\\d{1}-\\d{5}-\\d{1}-\\d{4}")
+                            val m = p.matcher(line.text)
+                            if (m.matches()){
+                                m.group(0)
+                            }else{
+
+                            }
+                        }
                         val lineText = line.text
                         val lineConfidence = line.confidence
                         val lineLanguages = line.recognizedLanguages
@@ -120,6 +132,10 @@ class MainActivity : AppCompatActivity() {
             analyzeText(imageBitmap)
         }
         super.onActivityResult(requestCode, resultCode, data)
+
+    }
+
+    private fun callApi(){
 
     }
 
