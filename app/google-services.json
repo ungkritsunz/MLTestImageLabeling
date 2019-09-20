@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "25444401576",
+    "firebase_url": "https://mltestimagelabeling.firebaseio.com",
+    "project_id": "mltestimagelabeling",
+    "storage_bucket": "mltestimagelabeling.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25444401576:android:dc5093eab0a058a72a5d9d",
+        "android_client_info": {
+          "package_name": "com.sunsosay.mltestimagelabeling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25444401576-1nkaedq55i0g2srrim6bq7uuajqjddco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sunsosay.mltestimagelabeling",
+            "certificate_hash": "ac0833861986e23b28f7eac65383731050aa4017"
+          }
+        },
+        {
+          "client_id": "25444401576-7bk971q5kqv0v35ksdtk1ms81oeq3n9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZiuAPTKwPefIlN62XmozmFkU9ek4EhQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25444401576-7bk971q5kqv0v35ksdtk1ms81oeq3n9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
